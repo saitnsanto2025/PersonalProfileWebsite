@@ -1,0 +1,32 @@
+/* =========================================================
+   Nexus Identity — custom rules that sit on top of Tailwind
+   (Tailwind utility classes handle most of the layout/colors
+   directly in index.html; this file covers the pieces Tailwind
+   can't express as utility classes.)
+========================================================= */
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.id-card-shadow {
+    box-shadow: 0 20px 40px rgba(22, 35, 59, 0.05);
+}
+
+.alternate-row:nth-child(even) {
+    background-color: rgba(22, 35, 59, 0.02);
+}
+
+.dashed-border {
+    border: 1.5px dashed #D7DCE3;
+}
+
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 1.125rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #3A6EA5;
+}

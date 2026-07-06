@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jane Student | Personal Profile</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#281800",
+                    "on-surface-variant": "#45474d",
+                    "primary-fixed": "#d7e2ff",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#002443",
+                    "tertiary-fixed-dim": "#9fcaff",
+                    "on-primary-container": "#7e8aa7",
+                    "on-primary-fixed": "#0e1b33",
+                    "secondary-fixed-dim": "#e3c191",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#75777e",
+                    "on-tertiary-container": "#5b8dc6",
+                    "surface-variant": "#e1e3e4",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-highest": "#e1e3e4",
+                    "secondary": "#745a32",
+                    "surface-bright": "#f8f9fa",
+                    "slate-gray": "#5B6472",
+                    "surface-container-low": "#f3f4f5",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#02497e",
+                    "inverse-surface": "#2e3132",
+                    "outline-variant": "#c5c6ce",
+                    "metallic-gold": "#A88A5E",
+                    "deep-navy": "#16233B",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "secondary-fixed": "#ffddaf",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#16233b",
+                    "on-surface": "#191c1d",
+                    "surface-container-high": "#e7e8e9",
+                    "border-subtle": "#D7DCE3",
+                    "tertiary-fixed": "#d2e4ff",
+                    "inverse-primary": "#bac6e6",
+                    "on-secondary-fixed-variant": "#5a431d",
+                    "primary-fixed-dim": "#bac6e6",
+                    "on-background": "#191c1d",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-container": "#785e36",
+                    "primary": "#010d24",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#3a4761",
+                    "tertiary": "#000e1f",
+                    "error-container": "#ffdad6",
+                    "background": "#f8f9fa",
+                    "secondary-container": "#fedaa8",
+                    "automation-blue": "#3A6EA5",
+                    "on-tertiary-fixed": "#001c37",
+                    "surface-tint": "#525e79"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "stack-md": "1rem",
+                    "container-max": "1100px",
+                    "component-gap": "2rem",
+                    "gutter": "1.5rem",
+                    "section-gap": "6rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-lg": ["Fraunces"],
+                    "headline-lg-mobile": ["Fraunces"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Fraunces"],
+                    "display-lg": ["Fraunces"],
+                    "label-md": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["1.125rem", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "label-sm": ["0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                    "headline-lg": ["2.25rem", { "lineHeight": "1.2", "fontWeight": "600" }],
+                    "headline-lg-mobile": ["1.85rem", { "lineHeight": "1.2", "fontWeight": "600" }],
+                    "body-md": ["1rem", { "lineHeight": "1.5", "fontWeight": "400" }],
+                    "headline-md": ["1.5rem", { "lineHeight": "1.3", "fontWeight": "500" }],
+                    "display-lg": ["3.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                    "label-md": ["0.875rem", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }]
+            }
+          },
+        },
+      }
+    </script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-border-subtle">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<a class="font-display-lg text-headline-md text-deep-navy tracking-tighter" href="#home">JS</a>
+<nav class="hidden md:flex items-center gap-stack-md">
+<a class="font-label-md text-label-md text-slate-gray hover:text-deep-navy transition-colors" href="#about">About</a>
+<a class="font-label-md text-label-md text-slate-gray hover:text-deep-navy transition-colors" href="#education">Education</a>
+<a class="font-label-md text-label-md text-slate-gray hover:text-deep-navy transition-colors" href="#skills">Skills</a>
+<a class="font-label-md text-label-md text-slate-gray hover:text-deep-navy transition-colors" href="#units">Course Units</a>
+<a class="font-label-md text-label-md text-slate-gray hover:text-deep-navy transition-colors" href="#contact">Contact</a>
+</nav>
+<a class="bg-deep-navy text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-full hover:bg-automation-blue hover:-translate-y-0.5 active:scale-95 transition-all duration-200" href="#contact">
+                Get In Touch
+            </a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter mt-section-gap grid grid-cols-1 md:grid-cols-12 gap-component-gap items-center" id="home">
+<div class="md:col-span-7 flex flex-col gap-stack-md">
+<span class="font-label-sm text-label-sm text-metallic-gold uppercase tracking-[0.2em]">Personal Profile Website</span>
+<h1 class="font-display-lg text-display-lg text-deep-navy">Hi, I'm <span class="text-automation-blue">Jane Student</span>.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    I'm a Computer Science student who enjoys building things for the web and solving problems with code. This site is a short introduction to who I am, what I study, and what I'm working toward.
+                </p>
+<div class="mt-stack-md flex gap-stack-md">
+<a class="bg-deep-navy text-on-primary font-label-md text-label-md px-8 py-3.5 rounded-full hover:bg-automation-blue hover:-translate-y-0.5 active:scale-95 transition-all duration-200 inline-flex items-center gap-2" href="#about">
+                        Learn more about me
+                        <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- ID Card Hero Component -->
+<div class="md:col-span-5 relative">
+<div class="bg-surface-container-lowest dashed-border rounded-xl p-8 id-card-shadow relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-6 bg-surface border-x border-b border-border-subtle rounded-b-lg"></div>
+<div class="flex flex-col items-center text-center gap-stack-md pt-4">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-metallic-gold">
+<img class="w-full h-full object-cover" alt="Profile portrait photo of Jane Student" src="https://raw.githubusercontent.com/saitnsanto2025/me/refs/heads/main/WhatsApp%20Image%202026-03-16%20at%2017.50.32.jpeg"/>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-deep-navy">Jane Student</h3>
+<span class="font-label-sm text-label-sm text-automation-blue font-semibold">BSc. Computer Science</span>
+</div>
+<div class="w-full grid grid-cols-1 gap-stack-sm text-left mt-4 pt-6 border-t border-border-subtle">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-slate-gray">ADMISSION NO.</span>
+<span class="font-label-md text-label-md font-bold text-deep-navy font-mono">CS/1234/2023</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-slate-gray">YEAR OF STUDY</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Year 2</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-slate-gray">INSTITUTION</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Your University Name</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-slate-gray">PROFESSIONAL INTERESTS</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Web Development, UI Design, Automation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="max-w-container-max mx-auto px-gutter mt-section-gap" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-component-gap">
+<div class="md:col-span-4">
+<span class="font-label-sm text-label-sm text-metallic-gold tracking-widest block mb-2 uppercase">Identity</span>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">Biography</h2>
+</div>
+<div class="md:col-span-8 bg-surface-container-low border border-border-subtle p-10 rounded-xl">
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>I am a second-year Computer Science student with a strong interest in building software that is both useful and easy to use. My academic interests lie mainly in web development and human-computer interaction, though I also enjoy the logic and structure of algorithms and data analysis. I like courses that let me build something tangible by the end of the semester rather than just studying theory in isolation.</p>
+<p>My career goal is to become a full-stack software developer, working on products that make everyday tasks simpler for the people who use them. In the longer term, I would like to contribute to open-source projects and eventually mentor younger students the way senior students have mentored me.</p>
+<p>I would describe my strengths as curiosity, patience with difficult problems, and a habit of asking "why" until I actually understand something rather than just memorising it. Outside of academics, I try to stay active and keep learning new skills, because I believe growth rarely happens by standing still.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Timeline -->
+<section class="bg-surface-container-low/50 py-section-gap mt-section-gap" id="education">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col items-center text-center mb-16">
+<span class="font-label-sm text-label-sm text-metallic-gold tracking-widest block mb-2 uppercase">Journey</span>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">Educational Background</h2>
+</div>
+<div class="relative max-w-3xl mx-auto timeline-line space-y-12">
+<!-- Step 1 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1.5 w-9 h-9 rounded-full bg-surface border-2 border-automation-blue flex items-center justify-center z-10">
+<span class="font-label-sm text-label-sm text-automation-blue">01</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Primary School</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sunrise Primary School — Completed 2014</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1.5 w-9 h-9 rounded-full bg-surface border-2 border-automation-blue flex items-center justify-center z-10">
+<span class="font-label-sm text-label-sm text-automation-blue">02</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Secondary School</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Green Valley High School — Completed 2018</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1.5 w-9 h-9 rounded-full bg-surface border-2 border-automation-blue flex items-center justify-center z-10">
+<span class="font-label-sm text-label-sm text-automation-blue">03</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">University / College</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your University Name — 2023 to present</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1.5 w-9 h-9 rounded-full bg-automation-blue flex items-center justify-center z-10 shadow-lg shadow-automation-blue/20">
+<span class="font-label-sm text-label-sm text-on-primary">04</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Current Course</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">BSc. Computer Science, Year 2</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills & Hobbies -->
+<section class="max-w-container-max mx-auto px-gutter mt-section-gap" id="skills">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-component-gap">
+<!-- Technical Skills -->
+<div class="flex flex-col gap-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-metallic-gold">terminal</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Technical Skills</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface-container-high px-4 py-2 rounded-full font-label-md text-label-md text-deep-navy transition-all hover:bg-automation-blue hover:text-white cursor-default">HTML &amp; CSS</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full font-label-md text-label-md text-deep-navy transition-all hover:bg-automation-blue hover:text-white cursor-default">JavaScript</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full font-label-md text-label-md text-deep-navy transition-all hover:bg-automation-blue hover:text-white cursor-default">Microsoft Word</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full font-label-md text-label-md text-deep-navy transition-all hover:bg-automation-blue hover:text-white cursor-default">Excel</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full font-label-md text-label-md text-deep-navy transition-all hover:bg-automation-blue hover:text-white cursor-default">PowerPoint</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full font-label-md text-label-md text-deep-navy transition-all hover:bg-automation-blue hover:text-white cursor-default">Networking Basics</span>
+</div>
+</div>
+<!-- Hobbies -->
+<div class="flex flex-col gap-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-metallic-gold">favorite</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Hobbies</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface-container px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant border border-border-subtle hover:border-metallic-gold transition-colors cursor-default">Reading</span>
+<span class="bg-surface-container px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant border border-border-subtle hover:border-metallic-gold transition-colors cursor-default">Football</span>
+<span class="bg-surface-container px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant border border-border-subtle hover:border-metallic-gold transition-colors cursor-default">Music</span>
+<span class="bg-surface-container px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant border border-border-subtle hover:border-metallic-gold transition-colors cursor-default">Travelling</span>
+<span class="bg-surface-container px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant border border-border-subtle hover:border-metallic-gold transition-colors cursor-default">Coding side-projects</span>
+<span class="bg-surface-container px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant border border-border-subtle hover:border-metallic-gold transition-colors cursor-default">Photography</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Units Table -->
+<section class="max-w-container-max mx-auto px-gutter mt-section-gap" id="units">
+<div class="bg-surface-container-lowest border border-border-subtle rounded-xl overflow-hidden id-card-shadow">
+<div class="p-8 border-b border-border-subtle bg-primary-container">
+<h2 class="font-headline-md text-headline-md text-on-primary">Current Course Units</h2>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container border-b border-border-subtle">
+<th class="px-8 py-4 font-label-sm text-label-sm text-deep-navy">UNIT CODE</th>
+<th class="px-8 py-4 font-label-sm text-label-sm text-deep-navy">UNIT NAME</th>
+<th class="px-8 py-4 font-label-sm text-label-sm text-deep-navy">LECTURER</th>
+<th class="px-8 py-4 font-label-sm text-label-sm text-deep-navy text-right">SEMESTER</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md">
+<tr class="alternate-row border-b border-border-subtle/50">
+<td class="px-8 py-5 font-label-md text-label-md text-automation-blue">CS201</td>
+<td class="px-8 py-5 text-on-surface">Data Structures &amp; Algorithms</td>
+<td class="px-8 py-5 text-on-surface-variant">Dr. A. Mwangi</td>
+<td class="px-8 py-5 text-right font-label-sm text-label-sm uppercase">Semester 1</td>
+</tr>
+<tr class="alternate-row border-b border-border-subtle/50">
+<td class="px-8 py-5 font-label-md text-label-md text-automation-blue">CS204</td>
+<td class="px-8 py-5 text-on-surface">Web Development</td>
+<td class="px-8 py-5 text-on-surface-variant">Ms. L. Kiptoo</td>
+<td class="px-8 py-5 text-right font-label-sm text-label-sm uppercase">Semester 1</td>
+</tr>
+<tr class="alternate-row border-b border-border-subtle/50">
+<td class="px-8 py-5 font-label-md text-label-md text-automation-blue">CS207</td>
+<td class="px-8 py-5 text-on-surface">Database Systems</td>
+<td class="px-8 py-5 text-on-surface-variant">Mr. J. Otieno</td>
+<td class="px-8 py-5 text-right font-label-sm text-label-sm uppercase">Semester 2</td>
+</tr>
+<tr class="alternate-row border-b border-border-subtle/50">
+<td class="px-8 py-5 font-label-md text-label-md text-automation-blue">CS210</td>
+<td class="px-8 py-5 text-on-surface">Computer Networks</td>
+<td class="px-8 py-5 text-on-surface-variant">Dr. P. Wanjiru</td>
+<td class="px-8 py-5 text-right font-label-sm text-label-sm uppercase">Semester 2</td>
+</tr>
+<tr class="alternate-row border-b border-border-subtle/50">
+<td class="px-8 py-5 font-label-md text-label-md text-automation-blue">CS213</td>
+<td class="px-8 py-5 text-on-surface">Operating Systems</td>
+<td class="px-8 py-5 text-on-surface-variant">Dr. A. Mwangi</td>
+<td class="px-8 py-5 text-right font-label-sm text-label-sm uppercase">Semester 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Welcome Action -->
+<section class="max-w-container-max mx-auto px-gutter mt-section-gap text-center">
+<div class="bg-deep-navy p-16 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">Want to connect?</h2>
+<button class="bg-metallic-gold text-white font-label-md text-label-md px-10 py-4 rounded-full hover:bg-automation-blue hover:-translate-y-1 active:scale-95 transition-all duration-300" id="welcomeBtn">
+                        Click for a welcome message
+                    </button>
+<p aria-live="polite" class="mt-8 font-headline-md text-headline-md text-secondary-fixed opacity-0 transition-all duration-500 transform translate-y-4" id="welcomeMessage"></p>
+</div>
+<!-- Subtle tech background pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-container-max mx-auto px-gutter mt-section-gap mb-section-gap" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-component-gap">
+<div class="md:col-span-5">
+<span class="font-label-sm text-label-sm text-metallic-gold tracking-widest block mb-2 uppercase">Connect</span>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-6">Contact Me</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Feel free to reach out for collaboration, questions, or just a friendly tech chat.</p>
+<div class="flex flex-col gap-stack-md">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-deep-navy text-[20px]">mail</span>
+</div>
+<span class="font-label-md text-label-md text-deep-navy">jane.student@example.com</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-deep-navy text-[20px]">location_on</span>
+</div>
+<span class="font-label-md text-label-md text-deep-navy">Your City, Tech Hub</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7">
+<form class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md" id="contactForm">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-slate-gray" for="fullName">FULL NAME</label>
+<input class="bg-surface border-0 border-b border-border-subtle focus:ring-0 focus:border-metallic-gold px-0 py-3 font-body-md transition-all" id="fullName" name="fullName" placeholder="Jane Doe" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-slate-gray" for="email">EMAIL ADDRESS</label>
+<input class="bg-surface border-0 border-b border-border-subtle focus:ring-0 focus:border-metallic-gold px-0 py-3 font-body-md transition-all" id="email" name="email" placeholder="jane@example.com" required="" type="email"/>
+</div>
+<div class="sm:col-span-2 flex flex-col gap-2 mt-4">
+<label class="font-label-sm text-label-sm text-slate-gray" for="subject">SUBJECT</label>
+<input class="bg-surface border-0 border-b border-border-subtle focus:ring-0 focus:border-metallic-gold px-0 py-3 font-body-md transition-all" id="subject" name="subject" placeholder="What is this about?" required="" type="text"/>
+</div>
+<div class="sm:col-span-2 flex flex-col gap-2 mt-4">
+<label class="font-label-sm text-label-sm text-slate-gray" for="message">MESSAGE</label>
+<textarea class="bg-surface border-0 border-b border-border-subtle focus:ring-0 focus:border-metallic-gold px-0 py-3 font-body-md transition-all resize-none" id="message" name="message" placeholder="Your message here..." required="" rows="4"></textarea>
+</div>
+<div class="sm:col-span-2 pt-6 flex gap-stack-md">
+<button class="bg-deep-navy text-on-primary font-label-md text-label-md px-10 py-4 rounded-full hover:bg-automation-blue hover:-translate-y-1 active:scale-95 transition-all duration-300" type="submit">
+                                Send Message
+                            </button>
+<button class="bg-transparent text-slate-gray border border-border-subtle font-label-md text-label-md px-10 py-4 rounded-full hover:bg-surface-container-high transition-all" type="reset">
+                                Reset
+                            </button>
+</div>
+<p aria-live="polite" class="sm:col-span-2 mt-4 font-label-md text-label-md text-automation-blue" id="formFeedback"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-12 mt-section-gap border-t border-border-subtle">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<a class="font-display-lg text-headline-md text-deep-navy tracking-tighter" href="#home">JS</a>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">© 2026 Jane Student. Built for Introduction to Web Development.</p>
+</div>
+<nav class="flex gap-stack-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-deep-navy transition-opacity opacity-80 hover:opacity-100 hover:underline decoration-metallic-gold decoration-2 underline-offset-4" href="mailto:jane.student@example.com">Email</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-deep-navy transition-opacity opacity-80 hover:opacity-100 hover:underline decoration-metallic-gold decoration-2 underline-offset-4" href="https://github.com/" target="_blank" rel="noopener">Github</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-deep-navy transition-opacity opacity-80 hover:opacity-100 hover:underline decoration-metallic-gold decoration-2 underline-offset-4" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+</nav>
+</div>
+</footer>
+<script src="script.js"></script>
+</body></html>

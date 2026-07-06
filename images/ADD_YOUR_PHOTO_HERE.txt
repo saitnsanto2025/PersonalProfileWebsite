@@ -1,0 +1,7 @@
+Add your profile picture to this folder and name it "profile.jpg"
+(or update the filename in index.html to match whatever you use).
+
+Recommended:
+- Square image, at least 400x400px
+- Under 500KB so the page loads quickly
+- A clear, professional headshot
