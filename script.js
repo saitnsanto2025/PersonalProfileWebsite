@@ -1,10 +1,4 @@
-// =========================================================
-// script.js
-// Welcome button, contact form feedback, and scroll-based
-// active nav-link highlighting.
-// =========================================================
 
-// ---- Welcome Button ----
 document.getElementById('welcomeBtn').addEventListener('click', function () {
     const messageEl = document.getElementById('welcomeMessage');
     messageEl.textContent = "Welcome to My Personal Profile Website. Thank you for visiting!";
@@ -18,9 +12,7 @@ document.getElementById('welcomeBtn').addEventListener('click', function () {
     }, 5000);
 });
 
-// ---- Contact Form ----
-// Client-side only demo: confirms submission without sending real email
-// (that would require a backend server).
+
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const feedback = document.getElementById('formFeedback');
@@ -36,7 +28,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     setTimeout(() => { feedback.textContent = ""; }, 5000);
 });
 
-// ---- Active Nav Link Highlighting on Scroll ----
+
 window.addEventListener('scroll', () => {
     const sections = ['about', 'education', 'skills', 'units', 'contact'];
     let current = '';
